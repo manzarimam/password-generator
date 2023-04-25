@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+
+
+    Website to crate beautiful gradient's
+    angry tools..
+ -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="project8.css">
+    <title>Password Generator</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="container">
+            <!-- heading -->
+            <h1>Password Generator</h1>
+
+            <!-- password display field -->
+            <div class="display_password">
+                <input type="text" readonly placeholder="Password" class="display" displayPassword>
+                <!-- custom attribute 👆 -->
+
+                <button copyButton>
+                    <span copyMsg></span>
+                    <img src="./assets/copy.svg" alt="copy" width="23" height="23">
+            </button>
+            </div>
+
+            <!-- entire input container field -->
+            <div class="input-container">
+
+                <!-- password length -->
+                <div class="password-length">
+                    <p>Password Length</p>
+                    <p passwordLength>0</p>
+                </div>
+
+                <!-- slider -->
+                <input type="range" min="1" max="20" class="slider" passwordSlider>
+
+                <!-- check boxes -->
+                <div class="check">
+                    <input class="" type="checkbox" name="box1" id="uppercase">
+                    <label for="uppercase">Includes upper case letter </label>
+                </div>
+
+                <div class="check">
+                    <input class="" type="checkbox" name="box1" id="lowercase">
+                    <label for="lowercase">Includes lowercase letters </label>
+                </div>
+
+                <div class="check">
+                    <input class="" type="checkbox" name="box1" id="numbers">
+                    <label for="numbers">Include numbers </label>
+                </div>
+                <div class="check">
+                    <input class="" type="checkbox" name="box1" id="symbols">
+                    <label for="symbols">Include symbols </label>
+                </div>
+
+
+                <!-- strength  -->
+                <div class="strengthContainer">
+                    <p>Strength</p>
+                    <!--  -->
+                    <div class="indicator" passStrengthIndicator></div>
+                    <p class="weak">weak password !!</p>
+                    <p class="medium">medium password !!</p>
+                    <p class="strong">strong password !!</p>
+                </div>
+
+
+                <!-- generate password button -->
+                <div class="buttons">
+                    <button id="generatePassword">
+                        Generate Password
+                    </button>
+
+                    <button class="clearPassword">
+                        Clear Password
+                    </button>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+    <script src="project8.js"></script>
+</body>
+
+</html>
